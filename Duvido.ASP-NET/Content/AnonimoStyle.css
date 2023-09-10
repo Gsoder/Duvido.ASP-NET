@@ -1,0 +1,203 @@
+/* Scrollbar */
+
+
+
+/* Botões */
+.botton {
+    height: 100px;
+    width: 250px;
+    /* Adicione outras propriedades da classe .botton aqui */
+}
+
+.button {
+    height: 70px;
+    width: 230px;
+    background-color: rgb(102, 103, 171);
+    border-radius: 25px;
+    border: 6px solid rgb(49, 49, 96);
+    
+    outline-offset: -8px;
+    display: flex;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3), inset -10px -10px 30px 0 #00000086;
+    transition: 0.5s;
+    /* Adicione outras propriedades da classe .button aqui */
+}
+
+.button:hover{
+
+    transform: scale(1.2);
+
+}
+
+/* Avatar */
+.avatar {
+    height: 250px;
+    width: 250px;
+    align-items: center;
+    display: flex;
+    background-image: url(../Imagens/UsuarioAnonimo/Imagens/avatarbase.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    outline: 6px solid rgb(49, 49, 96);
+    border-radius: 170px;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3), inset -15px -25px 30px 0 #00000086;
+    /* Adicione outras propriedades da classe .avatar aqui */
+}
+
+/* Fonte */
+.font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(49, 49, 96);
+    margin-top: 10px;
+    
+}
+
+
+.font::after {
+    /* Adiciona um pseudo-elemento ::after para ocultar o cursor no final da animação */
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    border-right: 0.15em solid transparent;
+}
+
+    
+
+
+/* Características */
+.features {
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* Adicione outras propriedades da classe .features aqui */
+}
+
+.features img{
+
+    width: 100%;
+
+}
+
+/* Avatares */
+.avatares {
+    height: 100px;
+    width: 100px;
+    outline: 4px solid rgba(242, 114, 236, 0.808);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-size: 100%;
+}
+
+.avatares img{
+
+    width: 100%;
+
+}
+
+.avatares:hover {
+    transform: scale(1.3);
+    /* Adicione outras propriedades da classe .avatares:hover aqui */
+}
+
+/* Quadro */
+.quadro {
+    background-color: aqua;
+    /* Adicione outras propriedades da classe .quadro aqui */
+}
+
+/* Botão de Pronto */
+.botaodepronto {
+    border: 1px solid rgb(49, 49, 96);
+    border-radius: 50px;
+    background-color: rgb(242, 114, 236, 0.808);
+    /* Adicione outras propriedades da classe .botaodepronto aqui */
+}
+
+/* Estilo do Modal */
+.exampleModalLabel {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(242, 114, 236, 0.808);
+    margin: 10px;
+    font-weight: bold;
+    margin: 8px;
+    /* Adicione outras propriedades da classe .exampleModalLabel aqui */
+}
+
+/* Cor do Modal */
+.cor {
+    background-color: rgb(30, 30, 36) !important;
+    /* Adicione outras propriedades da classe .cor aqui */
+}
+
+/* Estilo do Modal Header */
+.modal-header {
+    background-color: rgb(49, 49, 96);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adicione outras propriedades da classe .modal-header aqui */
+}
+
+/* Estilo do Modal Body com Scroll */
+.test {
+    max-height: 700px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Adicione outras propriedades da classe .test aqui */
+}
+
+.test2 {
+    height: 100px;
+    /* Adicione outras propriedades da classe .test2 aqui */
+}
+
+.selecionarAvatar .modal-dialog {
+    max-width: 625px; /* Define a largura máxima desejada */
+    width: 80%; /* Você pode ajustar essa porcentagem conforme necessário */
+}
+
+.modal.fade.show {
+    background-color: rgba(49, 49, 96, 0.5); 
+}
+
+
+.input-container {
+    position: relative;
+}
+
+input[type="text"] {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid rgb(179, 141, 250);
+    outline: none;
+    font-size: 22px;
+    padding: 10px;
+    background: none;
+}
+
+
+
+
+input[type="text"]:focus + label,
+input[type="text"]:valid + label {
+    top: -20px;
+    font-size: 20px;
+    color:  rgb(58, 122, 138);
+    transition: 0.3s ease-in-out;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color:  rgb(242, 114, 236, 0.808);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+

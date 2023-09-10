@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Jogar anonimo";
+    Layout = "~/Views/Shared/_DuvidoLayoutPage.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/AnonimoStyle.css">
+<script type="text/javascript" src="~/Scripts/AnonimoScript.js"></script>
+
+
+<div>
+    <div class="container-fluid" style="margin-left: 35px; display: flex;">
+        <div class="row">
+            <div class="col">
+                <div class="botoes">
+                    <div class="botton">
+                        <button class="button">
+                            <div class="features">
+                                <img src="~/Imagens/UsuarioAnonimo/Imagens/jogar.png" />
+                            </div>
+                            <span class="font">JOGAR</span>
+                        </button>
+                    </div>
+                    <div class="botton">
+                        @using (Html.BeginForm("Index", "CriarSalas", FormMethod.Post))
+                            {<button class="button">
+                                <div class="features">
+                                    <img src="~/Imagens/UsuarioAnonimo/Imagens/criarsala.png" />
+                                </div>
+                                <span class="font">CRIAR JOGO</span>
+                             </button>
+                             }
+                        
+                    </div>
+                    <div class="botton">
+                        <button class="button">
+                            <div class="features"></div>
+                            <span class="font">JOGOS CRIADOS</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="avatar gradient-background" id="avatar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                </div>
+                <div class="modal fade selecionarAvatar" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content cor">
+                            <div class="modal-header" style="border-bottom: 2px solid  rgba(242, 114, 236, 0.808);">
+                                <h1 id="exampleModalLabel" class="exampleModalLabel">Escolha o Seu Avatar!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body test">
+                                @if (Model != null && Model.NomesAvatares != null && Model.NomesAvatares.Count > 0)
+                                {
+                                    <div class="row">
+                                        @foreach (var avatar in Model.NomesAvatares)
+                                        {
+                                            <div class="col-md-3" style="width: 110px; margin: 5px;">
+                                                <div class="avatares">
+                                                    <img src="~/Imagens/UsuarioAnonimo/Avatares/@avatar" class="avatar-image" data-avatar="@avatar" data-bs-dismiss="modal" />
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <p>Nenhum avatar disponível.</p>
+                                }
+
+                                @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                                {
+                                    <p>@ViewBag.ErrorMessage</p>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-container">
+                    <input type="text" id="inputField" required>
+                    <label for="inputField">Nome</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

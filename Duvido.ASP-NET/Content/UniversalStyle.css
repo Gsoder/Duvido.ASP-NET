@@ -1,0 +1,78 @@
+﻿::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Body */
+body {
+    padding: 2em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px); /* Aplica o efeito de desfoque */
+    background-image: url(../Imagens/Universal/Imagens/fundo.png);
+    background-position: 100%
+}
+
+
+
+
+
+/* Fonte personalizada */
+@font-face {
+    font-family: Roboto;
+    src: url(https://fonts.google.com/specimen/Roboto?query=roboto) format("truetype");
+}
+
+/* Estilo da seção principal */
+.main {
+    height: 700px;
+    width: 900px !important;
+    border-radius: 90px;
+    border: 2px solid #f272ecce;
+    background-color: rgba(149, 101, 177, 0.644);
+    margin: auto;
+    margin-top: 100px;
+    padding-left: 25px;
+    /* Adicione outras propriedades da classe .main aqui */
+}
+/* Logo */
+#logo {
+    align-items: center;
+    height: 160px;
+    width: 270px;
+    margin: auto;
+    margin-top: 30px;
+    background-image: url(../Imagens/UsuarioAnonimo/Imagens/logo.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    /* Adicione outras propriedades da classe #logo aqui */
+}
+.audio-controls {
+    text-align: center;
+    margin: 50px;
+}
+
+#muteButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(242, 114, 236, 0.808); /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave de cor ao botão */
+}
+
+    #muteButton:hover {
+        background-color: rgb(179, 141, 250); /* Cor de fundo do botão ao passar o mouse */
+    }
+
