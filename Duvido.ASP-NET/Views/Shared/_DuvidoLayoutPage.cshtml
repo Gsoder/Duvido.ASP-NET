@@ -17,29 +17,27 @@
         <source src="~/Audio/Anonimo/musicafundo.mp3" type="audio/ogg">
 
     </audio>
-    <div class="container main shadow-lg">
-    
-        <div class="row">
-            <div class="col">
+            <div class="audio-controls" id="mute" style="margin-left: auto;">
+                <button id="muteButton">Mute/Unmute</button>
             </div>
-            <div class="col">
-                <div id="logo"></div>
-            </div>
-            <div class="col">
+    <div class="row">
+        <div class="container main shadow-lg">
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                    <div id="logo"></div>
+                </div>
+                <div class="col">
 
-                <div class="audio-controls" id="mute" style="margin-left: auto;">
-                    <button id="muteButton">Mute/Unmute</button>
                 </div>
 
 
             </div>
-
-
+            @RenderBody()
         </div>
-    @RenderBody()
-    </div>
-      
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+      </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>

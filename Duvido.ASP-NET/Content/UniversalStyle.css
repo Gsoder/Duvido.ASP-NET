@@ -25,7 +25,6 @@ body {
 
 
 
-
 /* Fonte personalizada */
 @font-face {
     font-family: Roboto;
@@ -40,7 +39,7 @@ body {
     border: 2px solid #f272ecce;
     background-color: rgba(149, 101, 177, 0.644);
     margin: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     padding-left: 25px;
     /* Adicione outras propriedades da classe .main aqui */
 }
@@ -54,22 +53,29 @@ body {
     background-image: url(../Imagens/UsuarioAnonimo/Imagens/logo.png);
     background-size: 98%;
     background-repeat: no-repeat;
+    margin-left: 40px;
     /* Adicione outras propriedades da classe #logo aqui */
 }
 .audio-controls {
     text-align: center;
-    margin: 50px;
+    margin: 35px;
+    position: fixed; /* Isso faz com que a div seja posicionada de forma fixa na janela do navegador */
+    top: 0; /* Coloca a div no topo da janela */
+    right: 0; /* Coloca a div no canto esquerdo da janela */
+
 }
 
 #muteButton {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
     background-color: rgb(242, 114, 236, 0.808); /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
     border: none; /* Remove a borda do botão */
-    border-radius: 5px; /* Arredonda as bordas do botão */
+    border-radius: 10px; /* Arredonda as bordas do botão */
     transition: background-color 0.3s; /* Adiciona uma transição suave de cor ao botão */
+    
+
 }
 
     #muteButton:hover {

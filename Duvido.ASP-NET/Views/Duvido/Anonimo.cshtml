@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Jogar anonimo";
+    ViewBag.Title = "Jogar anonasdo";
     Layout = "~/Views/Shared/_DuvidoLayoutPage.cshtml";
 }
 
@@ -8,7 +8,7 @@
 <script type="text/javascript" src="~/Scripts/AnonimoScript.js"></script>
 
 
-<div>
+
     <div class="container-fluid" style="margin-left: 35px; display: flex;">
         <div class="row">
             <div class="col">
@@ -22,7 +22,7 @@
                         </button>
                     </div>
                     <div class="botton">
-                        @using (Html.BeginForm("Index", "CriarSalas", FormMethod.Post))
+                        @using (Html.BeginForm("Index", "CriarSalas", FormMethod.Get))
                             {<button class="button">
                                 <div class="features">
                                     <img src="~/Imagens/UsuarioAnonimo/Imagens/criarsala.png" />
@@ -30,17 +30,19 @@
                                 <span class="font">CRIAR JOGO</span>
                              </button>
                              }
-                        
+                 
                     </div>
                     <div class="botton">
                         <button class="button">
-                            <div class="features"></div>
-                            <span class="font">JOGOS CRIADOS</span>
+                            <div class="features">
+                                <img src="~/Imagens/UsuarioAnonimo/Imagens/salascriadas.png" />
+                            </div>
+                            <span class="font">SALAS</span>
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
+            
                 <div class="avatar gradient-background" id="avatar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
                 </div>
@@ -80,13 +82,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="padding-left: 64px;">
                 <div class="input-container">
                     <input type="text" id="inputField" required>
                     <label for="inputField">Nome</label>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+        <div id="footerAnonimo" style="margin-left: -23px;">
+            <div id="textofooter">Questione as suas Dúvidas!</div>
+        </div>
+
+  
+
 
